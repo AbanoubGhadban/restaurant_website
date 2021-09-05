@@ -15,12 +15,22 @@
     font-family: 'Nunito', sans-serif;
     outline: none; border:none;
     transition: all .2s linear;
+    text-transform: capitalize;
 }
 
 html{
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
     font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+section:nth-child(even){
+    background:#eee;
 }
 
 .header {
@@ -130,6 +140,62 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
 }
 
+#home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem; 
+    padding-top: 9rem;
+}
+
+#home .home-slider .slide .content{
+    flex:1 1 45rem;
+}
+
+#home .home-slider .slide .image{
+    flex:1 1 45rem;
+}
+
+#home .home-slider .slide .image img{
+    width: 100%;
+}
+
+#home .home-slider .slide .content span{
+    color:var(--green);
+    font-size: 2.5rem;
+}
+
+#home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 7rem;
+}
+
+#home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--green);
+}
+
+.btn {
+    background-color: var(--black);
+    margin: 2rem 0;
+    color: #fff;
+    padding: .5rem 2.5rem;
+    display: inline-block;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+
+.btn:hover {
+    background-color: var(--green);
+    letter-spacing: .1rem;
+}
+
 @media (max-width: 991px) {
     .header {
         padding: 1rem 1rem;
@@ -143,6 +209,10 @@ input[type="search"]::-webkit-search-cancel-button {
     #search-form #search-box {
         width: 90%;
         margin: 0 1rem;
+    }
+
+    section{
+        padding:2rem;
     }
 }
 
