@@ -77,6 +77,59 @@ html{
     transform: rotate(360deg);
 }
 
+#search-form {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    background: none;
+    color: #fff;
+    font-size: 3rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+}
+
+#search-form #search-box::placeholder {
+    color: #aaa;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+#search-form label {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 1.5rem;
+}
+
+#search-form label:hover {
+    color: var(--green);
+}
+
+#search-form #close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
 @media (max-width: 991px) {
     .header {
         padding: 1rem 1rem;
@@ -85,6 +138,11 @@ html{
 
     html {
         font-size: 55%;
+    }
+
+    #search-form #search-box {
+        width: 90%;
+        margin: 0 1rem;
     }
 }
 
