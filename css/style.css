@@ -29,6 +29,19 @@ section{
     padding:2rem 9%;
 }
 
+section .sub-heading {
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+section .heading {
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
 section:nth-child(even){
     background:#eee;
 }
@@ -183,7 +196,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .btn {
     background-color: var(--black);
-    margin: 2rem 0;
+    margin: 1rem 0;
     color: #fff;
     padding: .5rem 2.5rem;
     display: inline-block;
@@ -194,6 +207,76 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn:hover {
     background-color: var(--green);
     letter-spacing: .1rem;
+}
+
+.dishes {
+    text-align: center;
+}
+
+.box-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+.box-container .box {
+    background-color: #fff;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-container .box img {
+    margin: 1.5rem 0;
+    height: 17rem;
+}
+
+.box-container .box h3 {
+    font-size: 2.5rem;
+}
+
+.box-container .box .stars {
+    margin: 1rem 0;
+    color: var(--green);
+    font-size: 1.8rem;
+}
+
+.box-container .box span {
+    color: var(--green);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.box-container .box .box-btn {
+    position: absolute;
+    top: 1.5rem;
+    font-size: 2rem;
+    background-color: #eee;
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: var(--black);
+}
+
+.box-container .box .box-btn:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.box-container .box .fa-eye {
+    left: -15rem;
+}
+
+.box-container .box .fa-heart {
+    right: -15rem;
+}
+
+.box-container .box:hover .fa-eye {
+    left: 1.5rem;
+}
+
+.box-container .box:hover .fa-heart {
+    right: 1.5rem;
 }
 
 @media (max-width: 991px) {
