@@ -2,6 +2,8 @@ const nav = document.querySelector('nav');
 const toggleNav = document.querySelector('.toggle-navbar');
 const searchIcon = document.querySelector(".nav-icons .search");
 const searchForm = document.getElementById("search-form");
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header .navbar a');
 
 toggleNav.onclick = () => {
     nav.classList.toggle('active');
@@ -11,6 +13,21 @@ toggleNav.onclick = () => {
 window.onscroll = () => {
     nav.classList.remove('active');
     toggleNav.classList.remove('fa-times');
+
+    sections.forEach(sec =>{
+
+        const top = window.scrollY;
+        const height = sec.offsetHeight;
+        const offset = sec.offsetTop - 150;
+        const id = sec.getAttribute('id');
+    
+        if(top >= offset && top < offset + height){
+          navLinks.forEach(links =>{
+            links.classList.remove('active');
+          });
+          document.querySelector('header .navbar a[href*='+id+']')?.classList.add('active');
+        };
+      });
 }
 
 searchIcon.onclick = () => {
