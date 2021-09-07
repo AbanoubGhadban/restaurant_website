@@ -33,6 +33,7 @@ section .sub-heading {
     color: var(--green);
     font-size: 2rem;
     padding-top: 1rem;
+    text-align: center;
 }
 
 section .heading {
@@ -40,6 +41,7 @@ section .heading {
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 section:nth-child(even){
@@ -347,6 +349,48 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .lg-btn * {
     vertical-align: middle;
+}
+
+.reviews .slide {
+    background-color: #fff;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.reviews .slide .fa-quote-right {
+    float: right;
+    font-size: 5rem;
+    color: #ccc;
+}
+
+.reviews .slide .user {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.reviews .slide .user img {
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews .slide .user .user-info h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.reviews .slide .user .user-info .stars {
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+.reviews .slide p {
+    margin-top: 2rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 991px) {
